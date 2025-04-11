@@ -1,13 +1,12 @@
 import type { Config } from "tailwindcss"
+
 const config: Config = {
   darkMode: ["class", "dark"],
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "*.{js,ts,jsx,tsx,mdx}",
-    "app/**/*.{ts,tsx}",
-    "components/**/*.{ts,tsx}",
   ],
   theme: {
     extend: {
@@ -45,32 +44,60 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        "accent-blue": "#00D4FF",
-        "accent-pink": "#FF00E5",
-        "accent-green": "#39FF14",
-        "text-primary": "#FFFFFF",
-        "text-secondary": "#B0B0B0",
+        // New AI theme colors
+        "ai-green": "#0FFF50",
+        "ai-orange": "#FF7700",
+        "ai-black": "#121212",
+        "ai-white": "#F8F8F8",
+        "ai-gray": "#2A2A2A",
+        "ai-accent": "#00EEFF",
+        chart: {
+          "1": "hsl(var(--chart-1))",
+          "2": "hsl(var(--chart-2))",
+          "3": "hsl(var(--chart-3))",
+          "4": "hsl(var(--chart-4))",
+          "5": "hsl(var(--chart-5))",
+        },
+        sidebar: {
+          DEFAULT: "hsl(var(--sidebar-background))",
+          foreground: "hsl(var(--sidebar-foreground))",
+          primary: "hsl(var(--sidebar-primary))",
+          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
+          accent: "hsl(var(--sidebar-accent))",
+          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
+          border: "hsl(var(--sidebar-border))",
+          ring: "hsl(var(--sidebar-ring))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-      fontFamily: {
-        orbitron: ["var(--font-orbitron)", "sans-serif"],
+      keyframes: {
+        "accordion-down": {
+          from: {
+            height: "0",
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
+        },
+        "accordion-up": {
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0",
+          },
+        },
       },
       animation: {
-        glow: "glow 3s infinite",
-        pulse: "pulse 3s ease-in-out infinite",
-        float: "float 6s ease-in-out infinite",
-        glitch: "glitch 2s infinite",
-        fadeIn: "fadeIn 0.5s ease-out forwards",
-        slideIn: "slideIn 0.5s ease-out forwards",
-        bounce: "bounce 2s ease-in-out infinite",
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
 }
-
 export default config

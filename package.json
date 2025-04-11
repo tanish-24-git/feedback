@@ -10,13 +10,16 @@
   },
   "dependencies": {
     "@prisma/client": "^6.6.0",
+    "@react-three/drei": "^10.0.6",
+    "@react-three/fiber": "^9.1.2",
     "@supabase/supabase-js": "^2.49.4",
     "canvas-confetti": "^1.9.3",
     "framer-motion": "^12.6.3",
     "lucide-react": "^0.487.0",
-    "next": "15.2.5",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "next": "^15.3.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.5.0",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
@@ -24,7 +27,7 @@
     "@tailwindcss/postcss": "^4",
     "@types/canvas-confetti": "^1.9.0",
     "@types/node": "^20",
-    "@types/react": "^19",
+    "@types/react": "^19.1.0",
     "@types/react-dom": "^19",
     "@types/tailwindcss": "^3.0.11",
     "eslint": "^9",

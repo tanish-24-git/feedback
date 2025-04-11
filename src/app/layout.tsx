@@ -12,8 +12,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-        <title>Feedback That Slaps</title>
-        <meta name="description" content="Get feedback that truly slaps" />
+        <title>Feedback AI</title>
+        <meta name="description" content="AI-powered feedback collection platform" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={orbitron.variable}>{children}</body>
     </html>
